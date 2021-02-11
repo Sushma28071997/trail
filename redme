@@ -1,0 +1,151 @@
+|
+
+ |
+| --- |
+
+| ![](RackMultipart20210211-4-1cl01y6_html_43dd0a6d6106ae8a.gif) ![](RackMultipart20210211-4-1cl01y6_html_f3ab5f434dc65dd9.gif)
+ |
+ |
+| --- | --- |
+|
+
+ |
+ |
+
+# Contents
+
+[Sushma Naganagouda](/C:%5CUsers%5CVishwanath%5CDesktop%5CGenesis_AAEL_Activity1ReportTemplate_V1.0.docx#_Toc46946999)
+
+Unique\_ID 2005050
+
+Introduction
+
+Model
+
+Data Inspector
+
+Matlab Function Block
+
+Look Up Table
+
+Signal Builder
+
+# Introduction
+
+#
+
+#
+
+# In this example, Simulink is used to model an automotive drivetrain. Stateflow enhances the Simulink model with its representation of the transmission control logic. Simulink provides a powerful environment for the modeling and simulation of dynamic systems and processes. In many systems, though, supervisory functions like changing modes or invoking new gain schedules must respond to events that may occur and conditions that develop over time. As a result, the environment requires a language capable of managing these multiple modes and developing conditions. In the following example, Stateflow demonstrates its strength in this capacity by performing the function of gear selection in an automatic transmission.
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+# Model
+
+#
+
+#
+
+### ![](RackMultipart20210211-4-1cl01y6_html_98f1c9193455d2bb.png)
+
+###
+
+### Simulink is a Matlab-based graphical programming environment for modeling, simulating and analyzing multidomain dynamic systems Its primary interface is a graphical block diagramming tool and a customizable set of block libraries. It offers tight integration with the rest of the MATLAB environment and can either drive MATLAB or be scripted from it. Simulink is widely used in automatic control and digital signal proccessing for multidomain simulation and model based design.
+
+### Stateflow is a control logic tool used to model reactive systems via state machines and flow charts within a Simulink model. Stateflow uses a variant of the finite state machines notation ,enabling the representation of hierarchy, parallelism and history within a state chart. Stateflow also provides state transition tables and truth tables.
+
+### Here We have modelled the Automatic Transmission Controller using the basic Simulink and State Flow diagram and analyse the model under various drive condtions.
+
+# 1.
+
+# Data Inspector
+
+# ![](RackMultipart20210211-4-1cl01y6_html_7f71eddce25639d0.png)
+
+The Simulation Data Inspector visualizes and compares multiple kinds of data.Using the Simulation Data Inspector, you can inspect and compare time series data at multiple stages of your workflow. This example workflow shows how the Simulation Data Inspector supports all stages of the design cycle:
+
+1.[View Data in the Simulation Data Inspector](https://in.mathworks.com/help/simulink/ug/populate-sdi-with-your-data.html).
+
+Run a simulation in a model configured to log data to the Simulation Data Inspector, or import data from the workspace or a MAT-file. You can view and verify model input data or inspect logged simulation data while iteratively modifying your model diagram, parameter values, or model configuration.
+
+2.[Inspect Simulation Data](https://in.mathworks.com/help/simulink/ug/visual-inspection-of-signal-data.html).
+
+Plot signals on multiple subplots, zoom in and out on specified plot axes, and use data cursors to understand and evaluate the data. [Create Plots Using the Simulation Data Inspector](https://in.mathworks.com/help/simulink/ug/create-plots-with-the-simulation-data-inspector.html) to tell your story.
+
+3.[Compare Simulation Data](https://in.mathworks.com/help/simulink/ug/compare-simulation-data.html)
+
+Compare individual signals or simulation runs and analyze your comparison results with relative, absolute, and time tolerances. The compare tools in the Simulation Data Inspector facilitate iterative design and allow you to highlight signals that do not meet your tolerance requirements. For more information about the comparison operation, see [How the Simulation Data Inspector Compares Data](https://in.mathworks.com/help/simulink/ug/how-the-simulation-data-inspector-tool-compares-time-series-data.html).
+
+4.[Save and Share Simulation Data Inspector Data and Views](https://in.mathworks.com/help/simulink/ug/save-and-share-simulation-data-inspector-data-and-views.html).
+
+Share your findings with others by saving Simulation Data Inspector data and views.
+
+Here we are comparing the parameters like Engine RPM, Vehicle Speed ,Output Torque etc under various conditions(throttle and Brake) and analyse the Variations of the above mentioned parameters.
+
+# 2. MATLAB function block
+
+![](RackMultipart20210211-4-1cl01y6_html_5db4fd48ea4bad76.png)
+
+MATLAB Function blocks enable you to define custom functionality in Simulink models by using the MATLAB language. They are the easiest way to bring MATLAB code into Simulink. MATLAB Function blocks support C/C++ code generation from Simulink Coder and Embedded Coder.
+
+# 3. Look-up table
+
+![](RackMultipart20210211-4-1cl01y6_html_e55953ca2ea76b53.png) ![](RackMultipart20210211-4-1cl01y6_html_642bdc0a0c359dae.png)
+
+A _lookup table_ is an array of data that maps input values to output values, thereby approximating a mathematical function. Given a set of input values, a lookup operation retrieves the corresponding output values from the table. If the lookup table does not explicitly define the input values, Simulink can estimate an output value using interpolation, extrapolation, or rounding, where:
+
+- An interpolation is a process for estimating values that lie between known data points.
+- An extrapolation is a process for estimating values that lie beyond the range of known data points.
+- A rounding is a process for approximating a value by altering its digits according to a known rule.
+
+A lookup table block uses an array of data to map input values to output values, approximating a mathematical function. Given input values, Simulink performs a &quot;lookup&quot; operation to retrieve the corresponding output values from the table. If the lookup table does not define the input values, the block estimates the output values based on nearby table values.
+
+#
+
+#
+
+# 4. Signal Builder
+
+#
+
+# ![](RackMultipart20210211-4-1cl01y6_html_90bb1d7834b9a174.png)
+
+#
+
+#
+
+# The Signal Builder block allows you to create interchangeable groups of piecewise linear signal sources and use them in a model. You can quickly switch the signal groups into and out of a model to facilitate testing.
+
+4 ![](RackMultipart20210211-4-1cl01y6_html_8074b0572794b372.gif)
